@@ -18,14 +18,16 @@ const AdminProfile = () => {
   }, []);
 
   return (
-    <div>
+    <div className="p-6 bg-gray-100 min-h-screen">
       {profile ? (
-        <div>
-          <h1>Welcome, {profile.username}</h1>
-          <p>Admin ID: {profile._id}</p>
+        <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+          <h1 className="text-2xl font-bold text-blue-600">Welcome, {profile.username}</h1>
+          <p className="text-gray-700 mt-4">Admin ID: {profile._id}</p>
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="text-center">
+          <p className="text-gray-500 text-lg">Loading...</p>
+        </div>
       )}
     </div>
   );

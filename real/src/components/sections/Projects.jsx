@@ -4,8 +4,7 @@ export default function OurProjects() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    // Simulate fetching data from the backend
-    fetch("http://localhost:8080/api/projects") // Replace this URL with your backend endpoint
+    fetch("http://localhost:8080/api/projects")
       .then((response) => response.json())
       .then((data) => setProjects(data))
       .catch((error) => console.error("Error fetching projects:", error));

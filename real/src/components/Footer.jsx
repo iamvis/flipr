@@ -5,20 +5,14 @@ import Linkdin from "../assests/Linkedin.svg";
 import fb from "../assests/fb.svg";
 import twiter from "../assests/twiter.svg";
 import insta from "../assests/insta.svg";
+
 const Footer = () => {
   return (
     <>
-      {/* Background Section with Text and Button */}
+      {/* Background Section */}
       <div
-        className="bg-gray-100 relative"
-        style={{
-          backgroundImage: `url(${rec})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '500px',
-          paddingBottom: '50px',
-        }}
+        className="bg-gray-100 bg-cover bg-center h-[500px] pb-[50px]"
+        style={{ backgroundImage: `url(${rec})` }}
       >
         <div className="container mx-auto h-full flex flex-col justify-center items-center text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 max-w-2xl mb-6">
@@ -26,9 +20,6 @@ const Footer = () => {
           </h2>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md shadow-md"
-            onClick={() => {
-              // Add your button click logic here
-            }}
           >
             Learn More
           </button>
@@ -38,7 +29,7 @@ const Footer = () => {
       {/* Navigation and Subscription Section */}
       <div className="bg-blue-500 p-4">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <nav className="flex  space-x-4 text-white">
+          <nav className="flex space-x-4 text-white">
             <a href="#" className="hover:underline">Home</a>
             <a href="#" className="hover:underline">Services</a>
             <a href="#" className="hover:underline">Projects</a>
@@ -65,23 +56,19 @@ const Footer = () => {
       <div className="bg-gray-900 text-gray-400 p-4">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm">&copy; Copyright 2023</div>
-
-          <div className="flex justify-center items-center">
-          <img src={Logo} alt="Company Logo" className="h-10 md:h-12" /> {/* Adjusted height */}
-        </div>
-          <div className="flex space-x-4 text-white">
-            {/* Social Media Icons */}
+          <img src={Logo} alt="Company Logo" className="h-10 md:h-12" />
+          <div className="flex space-x-4">
             <a href="#" className="hover:text-white">
-              <img src={twiter} alt="tw"  />
+              <img src={twiter} alt="Twitter" />
             </a>
             <a href="#" className="hover:text-white">
-            <img src={fb} alt="fb" />
+              <img src={fb} alt="Facebook" />
             </a>
             <a href="#" className="hover:text-white">
-            <img src={insta} alt="inst" />
+              <img src={insta} alt="Instagram" />
             </a>
             <a href="#" className="hover:text-white">
-            <img src={Linkdin} alt="tw" />
+              <img src={Linkdin} alt="LinkedIn" />
             </a>
           </div>
         </div>

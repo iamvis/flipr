@@ -4,7 +4,6 @@ export default function Clients() {
   const [clients, setClients] = useState([]);
 
   useEffect(() => {
-    // Simulate fetching data from the backend
     fetch("/api/clients") // Replace this URL with your backend endpoint
       .then((response) => response.json())
       .then((data) => setClients(data))
